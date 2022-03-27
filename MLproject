@@ -1,0 +1,29 @@
+name: pytorch-CNN
+
+conda_env: conda.yaml
+# Can have a docker_env instead of a conda_env, e.g.
+# docker_env:
+#    image:  mlflow-docker-example
+
+entry_points:
+  main:  
+    command: "python src/main.py"
+  
+  get_data:
+    config: {type: str, default: "config/config.yaml"}
+    command: "python src/stage_01_get_data.py" 
+  
+  base_model_creation:
+    parameters:
+      config_path: {type: str, default: "config/config.yaml"}
+    command: "python src/stage_02_base_model_creation.py -c {config_path}"
+  
+  training_model:
+    parameters:
+      config_path: {type: str, default: "config/config.yaml"}
+    command: "python src/stage_03_training_model.py -c {config_path}"
+
+  prediction:
+    parameters:
+      config_path: {type: str, default: "config/config.yaml"}
+    command: "python src/stage_04_prediction.py"
