@@ -2,11 +2,7 @@ import yaml
 import os
 import logging
 
-"""
-
-Used to perform common tasks
-
-"""
+""" Used to perform common tasks """
 
 def read_yaml(yaml_path):
 
