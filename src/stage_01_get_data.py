@@ -57,10 +57,12 @@ def main(config_path):
     logging.info(f"getting dataloader")
 
     train_data_loader = DataLoader(dataset=train_data, shuffle=True, batch_size=content['params']['BATCH_SIZE'])
-    
+
     test_data_loader = DataLoader(dataset=test_data, batch_size=content['params']['BATCH_SIZE'], shuffle=False)
 
     return train_data_loader, test_data_loader, label_map
+
+
 
 
 
