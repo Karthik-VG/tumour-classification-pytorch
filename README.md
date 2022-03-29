@@ -6,10 +6,10 @@ This project built for brain tumor detection and classification. We are trying t
 2. glioma_tumor
 3. meningioma_tumor
 
-## MRI with No Tumor
+## No Tumor
 ![image](https://user-images.githubusercontent.com/68362075/160554599-7ab98427-94ce-469f-af9b-be82ab07ab8f.png)
 
-## MRI with Tumor
+## Tumor
 ![image](https://user-images.githubusercontent.com/68362075/160554903-89d9b741-6227-4176-96df-b3260da51655.png)
 
 
