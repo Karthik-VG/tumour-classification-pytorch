@@ -1,5 +1,14 @@
 # Tumor classification
 
+This project built for brain tumor detection and classification. We are trying to classify 3 types of tumor in human brain.
+
+1. pituitary_tumor
+2. glioma_tumor
+3. meningioma_tumor
+
+In this project we are using Resnet-50 model architecture. This project is implemented with MLflow.
+
+
 # STEPS
 
 ## step 01 - Clone the new repository
