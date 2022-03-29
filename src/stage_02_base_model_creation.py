@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.modules.pooling import MaxPool2d
 import argparse
-from torchvision impot models
+from torchvision import models
 from src.utils.common import read_yaml, create_directories
 
 STAGE = "stage_02_base_model_creation"
@@ -19,15 +19,15 @@ logging.basicConfig(filename=os.path.join("logs", "running_logs.log"),
 
 
 class CNN:
-  def model(self):
-    model=models.resnet50(pretrained=True)
-    model.classifier = nn.Sequential(
+  def modl(self):
+    model_creation=models.resnet50(pretrained=True)
+    model_creation.classifier = nn.Sequential(
     nn.Linear(in_features=9216, out_features=100, bias=True),
     nn.ReLU(inplace=True),
     nn.Dropout(p=0.5, inplace=False),
     nn.Linear(in_features=100, out_features=4, bias=True)
     )
-    return model
+    return model_creation
 
 if __name__ == "__main__":
     try:
@@ -41,7 +41,7 @@ if __name__ == "__main__":
         create_directories([model_path])
         model_name = content['artifacts']['base_model']
         full_model_path = os.path.join(model_path, model_name)
-        model_ob = CNN().model()
+        model_ob = CNN().modl()
         torch.save(model_ob, full_model_path)
         logging.info(f"model created and saved at {full_model_path}")
         logging.info(f">>>>>>>>>>>>>>>>>{STAGE} completed<<<<<<<<<<<<<<<")

@@ -5,7 +5,7 @@ import os
 import torch
 from tqdm import tqdm
 import torch.nn as nn
-# import torch.nn as nn
+# import torch.nn as nn       
 import argparse
 from src import stage_01_get_data
 from src.stage_02_base_model_creation import CNN
@@ -25,6 +25,7 @@ def main(config_path):
         base_model_path = os.path.join(content['artifacts']['model'], content['artifacts']['base_model'])
         logging.info(f"loading model {base_model_path}")
         loaded_model = torch.load(base_model_path)
+        #print(base_model_path)
         loaded_model.eval()
         logging.info(f'{base_model_path} model loaded')
         # load model in cuda

@@ -12,7 +12,7 @@ artifacts:
 params:
   BATCH_SIZE: 32
   LR: 0.001
-  IMAGE_SIZE: (28,28)
+  IMAGE_SIZE: [512,512]
   SEED: 2022
   no_of_test_data_batches_for_prediction: 3  # 32 or BATCH_SIZE img per no_of_test_data_batches_for_prediction
 Epoch: 1
