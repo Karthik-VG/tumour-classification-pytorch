@@ -55,7 +55,6 @@ sklearn==0.0
 smmap==5.0.0
 SQLAlchemy==1.4.32
 sqlparse==0.4.2
--e git+https://github.com/neerajbafila/pytorch-CNN.git@ed4f8b10a9c73d232acf58baf619837cdea943f3#egg=src
 tabulate==0.8.9
 threadpoolctl==3.1.0
 torch==1.11.0
