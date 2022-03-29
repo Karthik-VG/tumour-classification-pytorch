@@ -13,7 +13,7 @@ This project built for brain tumor detection and classification. We are trying t
 ![image](https://user-images.githubusercontent.com/68362075/160554903-89d9b741-6227-4176-96df-b3260da51655.png)
 
 
-In this project we are using Resnet-50 model architecture. This project is implemented with MLflow.
+In this project we are using Resnet-50 model architecture and implemented with MLflow.
 
 
 # STEPS
